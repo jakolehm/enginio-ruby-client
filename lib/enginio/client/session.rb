@@ -1,5 +1,5 @@
-require "json"
-require "httpclient"
+require 'json'
+require 'httpclient'
 
 module Enginio
   module Client
@@ -13,7 +13,7 @@ module Enginio
       #
       # @param [String] backend_id
       # @param [String] api_url
-      def initialize(backend_id, api_url = 'https://staging.engin.io/v1')
+      def initialize(backend_id, api_url = 'https://api.engin.io/v1')
         @backend_id = backend_id
         @api_client = HTTPClient.new
         @default_headers = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
